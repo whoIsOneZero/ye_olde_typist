@@ -18,8 +18,8 @@
     }
   ],
   "icons": {
-    "16": "icons/ye_olde_icon_16.png",
-    "48": "icons/ye_olde_icon_48.png",
-    "128": "icons/ye_olde_icon_128.png"
+    "16": "icons/ye_olde_icon-16.png",
+    "48": "icons/ye_olde_icon-48.png",
+    "128": "icons/ye_olde_icon-128.png"
   }
 }

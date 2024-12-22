@@ -29,17 +29,26 @@ function fetchConvertedText(inputText) {
     });
 }
 
+let typingTimeout;
+
 // Function to transform text in the message box
 function transformMessageBox() {
   const messageBox = document.querySelector('div[contenteditable="true"]');
+
   if (messageBox) {
     const originalText = messageBox.innerText;
 
-    fetchConvertedText(originalText).then((convertedText) => {
-      if (convertedText) {
-        messageBox.innerText = convertedText;
-      }
-    });
+    // Clear any previous timeout
+    clearTimeout(typingTimeout);
+
+    // Set a new timeout to perform the transformation after a delay (e.g., 500ms)
+    typingTimeout = setTimeout(() => {
+      fetchConvertedText(originalText).then((convertedText) => {
+        if (convertedText) {
+          messageBox.innerText = convertedText;
+        }
+      });
+    }, 500); // Adjust the delay as needed
   }
 }
 

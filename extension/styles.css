@@ -13,7 +13,7 @@ body {
   padding: 20px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for style */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 textarea {
@@ -27,12 +27,12 @@ textarea {
 }
 
 #input-text {
-  background-color: #f0f0f0; /* Light grey for the input textarea */
+  background-color: #f0f0f0;
 }
 
 #output-text {
   background-color: #e6f7ff;
-  color: #333; /* Dark text color for better readability */
+  color: #333;
   border: 2px solid #4caf50;
 }
 

@@ -38,17 +38,16 @@ function transformMessageBox() {
   if (messageBox) {
     const originalText = messageBox.innerText;
 
-    // Clear any previous timeout
     clearTimeout(typingTimeout);
 
-    // Set a new timeout to perform the transformation after a delay (e.g., 500ms)
+    // Set a new timeout to perform the transformation after a delay
     typingTimeout = setTimeout(() => {
       fetchConvertedText(originalText).then((convertedText) => {
         if (convertedText) {
           messageBox.innerText = convertedText;
         }
       });
-    }, 500); // Adjust the delay as needed
+    }, 500);
   }
 }
 
